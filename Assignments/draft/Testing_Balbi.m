@@ -446,6 +446,44 @@ ylim([0, max(ros)]);
 
 sgtitle('Chi vs. ROS, R_c, R_b, R_f', fontsize = 18, fontweight = 'bold')
 
+%% SAVR
+x = linspace(100, 5000, 1000);
+[ros, R_c, R_f, R_b] = ros_balbi(fuel(1), 1.5, tand(3), 0.03, x);
+% Rate of spread
+subplot(2, 2, 1);
+plot(x, ros, color = 'red');
+xlabel('SAVR (1/ft)', fontsize = 12, fontweight = 'bold');
+ylabel('Rate of Spread', fontsize = 12, fontweight = 'bold');
+title('ROS vs. SAVR (1/ft)', fontsize = 15, fontweight = 'bold');
+grid on;
+ylim([0, max(ros)]);
+% Convective component
+subplot(2, 2, 2);
+plot(x, R_c, color = 'blue');
+xlabel('SAVR (1/ft)', fontsize = 12, fontweight = 'bold');
+ylabel('R_c', fontsize = 12, fontweight = 'bold');
+title('R_c vs. SAVR (1/ft)', fontsize = 15, fontweight = 'bold');
+grid on;
+ylim([0, max(ros)]);
 
+% Radiative component
+subplot(2, 2, 3);
+plot(x, R_b, color = 'magenta');
+xlabel('SAVR (1/ft)', fontsize = 12, fontweight = 'bold');
+ylabel('R_b', fontsize = 12, fontweight = 'bold');
+title('R_b vs. SAVR (1/ft)', fontsize = 15, fontweight = 'bold');
+grid on;
+ylim([0, max(ros)]);
+
+% Flame base radiation
+subplot(2, 2, 4);
+plot(x, R_f, color = 'green');
+xlabel('SAVR (1/ft)', fontsize = 12, fontweight = 'bold');
+ylabel('R_f', fontsize = 12, fontweight = 'bold');
+title('R_f vs. SAVR (1/ft)', fontsize = 15, fontweight = 'bold');
+grid on;
+ylim([0, max(ros)]);
+
+sgtitle('SAVR (1/ft) vs. ROS, R_c, R_b, R_f', fontsize = 18, fontweight = 'bold')
 
 
