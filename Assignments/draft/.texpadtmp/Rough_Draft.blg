@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: /Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.aux
+The style file: agsm.bst
+Database file #1: ../export.bib
+You've used 5 entries,
+            2909 wiz_defined-function locations,
+            675 strings with 6054 characters,
+and the built_in function-call counts, 36268 in all, are:
+= -- 6002
+> -- 514
+< -- 0
++ -- 3008
+- -- 161
+* -- 3265
+:= -- 7055
+add.period$ -- 5
+call.type$ -- 5
+change.case$ -- 69
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 79
+empty$ -- 163
+format.name$ -- 175
+if$ -- 6516
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 18
+num.names$ -- 54
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 75
+quote$ -- 0
+skip$ -- 67
+stack$ -- 0
+substring$ -- 8719
+swap$ -- 13
+text.length$ -- 70
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 18
+warning$ -- 0
+while$ -- 108
+width$ -- 0
+write$ -- 70

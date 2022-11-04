@@ -1,4 +1,4 @@
-function ros =fire_ros(fuel,speed,tanphi,fmc_g)
+function [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] =fire_ros(fuel,speed,tanphi,fmc_g)
 % ros=fire_ros(fuel,speed,tanphi)
 % ros=fire_ros(fuel,speed,tanphi,fmc_g)
 % in

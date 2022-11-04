@@ -1,0 +1,37 @@
+\begin{thebibliography}{xx}
+
+\harvarditem[Anderson et~al.]{Anderson, Catchpole \harvardand\
+  Butler}{2010}{Anderson2010}
+Anderson, W.~R., Catchpole, E.~A. \harvardand\ Butler, B.~W.  \harvardyearleft
+  2010\harvardyearright , `Convective heat transfer in fire spread through fine
+  fuel beds', {\em International Journal of Wildland Fire} {\bf 19},~284--298.
+
+\harvarditem[Balbi et~al.]{Balbi, Chatelon, Morvan, Rossi, Marcelli
+  \harvardand\ Morandini}{2020}{Balbi2020}
+Balbi, J.~H., Chatelon, F.~J., Morvan, D., Rossi, J.~L., Marcelli, T.
+  \harvardand\ Morandini, F.  \harvardyearleft 2020\harvardyearright , `A
+  convective-radiative propagation model for wildland fires', {\em
+  International Journal of Wildland Fire} {\bf 29}.
+
+\harvarditem[Balbi et~al.]{Balbi, Rossi, Marcelli \harvardand\
+  Santoni}{2007}{Balbi2007}
+Balbi, J.~H., Rossi, J.~L., Marcelli, T. \harvardand\ Santoni, P.~A.
+  \harvardyearleft 2007\harvardyearright , `A 3d physical real-time model of
+  surface fires across fuel beds', {\em Combustion Science and Technology} {\bf
+  179},~2511--2537.
+
+\harvarditem[Chatelon et~al.]{Chatelon, Balbi, Cruz, Morvan, Rossi, Awad,
+  Frangieh, Fayad \harvardand\ Marcelli}{2022}{Chatelon2022}
+Chatelon, F.~J., Balbi, J.~H., Cruz, M.~G., Morvan, D., Rossi, J.~L., Awad, C.,
+  Frangieh, N., Fayad, J. \harvardand\ Marcelli, T.  \harvardyearleft
+  2022\harvardyearright , `Extension of the balbi fire spread model to include
+  the field scale conditions of shrubland fires', {\em International Journal of
+  Wildland Fire} {\bf 31},~176--192.
+
+\harvarditem{Rothermel}{1972}{Rothermel1972}
+Rothermel, R.~C.  \harvardyearleft 1972\harvardyearright , {\em A mathematical
+  model for predicting fire spread in wildland fuels}, Intermountain Forest and
+  Range Experiment Station, Forest Service, United States Department of
+  Agriculture.
+
+\end{thebibliography}

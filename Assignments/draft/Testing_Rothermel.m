@@ -8,6 +8,8 @@ fuels_mod;
 %% Testing just the base model
 ros_rothermel(fuel(1), 1.5, tand(3), 0.03)
 
+% Make the figure smaller
+%figure out how to change the figsize 
 %% Testing the Fuel Moisture
 x = linspace(0, 1, 1000);
 [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(1), 1.5, tand(3), x);
