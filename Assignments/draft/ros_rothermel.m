@@ -1,4 +1,6 @@
-function [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] =fire_ros(fuel,speed,tanphi,fmc_g)
+function [ros] = fire_ros(fuel,speed,tanphi,fmc_g, input)
+
+%function [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] =fire_ros(fuel,speed,tanphi,fmc_g, input)
 % ros=fire_ros(fuel,speed,tanphi)
 % ros=fire_ros(fuel,speed,tanphi,fmc_g)
 % in
@@ -14,8 +16,9 @@ function [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] =fire_ros(fuel,sp
 windrf=fuel.windrf;               % WIND REDUCTION FACTOR
 fgi=fuel.fgi;                     % INITIAL TOTAL MASS OF SURFACE FUEL (KG/M**2)
 fueldepthm=fuel.fueldepthm;       % FUEL DEPTH (M)
-%savr=fuel.savr;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
-savr = 1752.6;
+savr=fuel.savr;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
+%savr = 1752.6;
+%savr=input;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
 fuelmce=fuel.fuelmce;             % MOISTURE CONTENT OF EXTINCTION
 fueldens=fuel.fueldens;           % OVENDRY PARTICLE DENSITY, LB/FT^3
 st=fuel.st;                       % FUEL PARTICLE TOTAL MINERAL CONTENT

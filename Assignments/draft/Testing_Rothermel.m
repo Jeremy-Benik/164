@@ -17,12 +17,13 @@ x = x .* 100;
 
 % Rate of spread
 %subplot(3, 3, 1);
+figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(3, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, color = 'red');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread', fontsize = 11, fontweight = 'bold');
-title('ROS vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('ROS vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -32,7 +33,7 @@ nexttile
 plot(x, ir, color = 'blue');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('IR', fontsize = 11, fontweight = 'bold');
-title('IR vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('IR vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -42,7 +43,7 @@ nexttile
 plot(x, qig, color = 'magenta');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('Q_{ig} btu/lb', fontsize = 11, fontweight = 'bold');
-title('Qig vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('Qig vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
  
@@ -52,7 +53,7 @@ nexttile
 plot(x, phiw, color = 'green');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
-title('Phi_w vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('Phi_w vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -61,17 +62,16 @@ nexttile
 plot(x, phis, color = 'black');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('Phi_S', fontsize = 11, fontweight = 'bold');
-title('Slope Coefficient vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('Phi_s vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
-
 
 %subplot(3, 3, 6);
 nexttile
 plot(x, gamma, color = 'cyan');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Gamma vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('Gamma vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -80,7 +80,7 @@ nexttile
 plot(x, xifr, color = '#E8B320');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('xifr', fontsize = 11, fontweight = 'bold');
-title('Propagating Flux Ratio vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('Propagating Flux Ratio vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -89,7 +89,7 @@ nexttile
 plot(x, etam, color = '#26720F');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('etam', fontsize = 11, fontweight = 'bold');
-title('Moisture Damping Coef. vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('Moisture Damping Coef. vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -98,7 +98,7 @@ nexttile
 plot(x, rtemp1, color = '#970000');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('FMC/FMC Extinction', fontsize = 11, fontweight = 'bold');
-title('FMC/FMC Extinction vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('FMC/FMC Extinction vs. Fuel Moisture', fontsize = 11, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -110,10 +110,11 @@ x = linspace(0, 20, 1000);
 
 % Rate of spread
 %subplot(3, 3, 1);
+figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(3, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, color = 'red');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread', fontsize = 11, fontweight = 'bold');
 title('ROS vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
@@ -123,8 +124,8 @@ grid on;
 %subplot(3, 3, 2);
 nexttile
 plot(x, ir, color = 'blue');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
-ylabel('Reaction Intensity btu/ft^2 min (IR)', fontsize = 11, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+ylabel('IR', fontsize = 11, fontweight = 'bold');
 title('IR vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
@@ -133,8 +134,8 @@ grid on;
 %subplot(3, 3, 3);
 nexttile
 plot(x, qig, color = 'magenta');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
-ylabel('Heat of Preignition (Qig) btu/lb', fontsize = 11, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+ylabel('Q_{ig} btu/lb', fontsize = 11, fontweight = 'bold');
 title('Qig vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
@@ -143,18 +144,18 @@ grid on;
 %subplot(3, 3, 4);
 nexttile
 plot(x, phiw, color = 'green');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
-ylabel('Wind Coefficient (Phiw)', fontsize = 11, fontweight = 'bold');
-title('Wind Coefficient vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
+title('Phi_w vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 5);
 nexttile
 plot(x, phis, color = 'black');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
-ylabel('Slope Coefficient (PhiS)', fontsize = 11, fontweight = 'bold');
-title('Slope Coefficient vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+ylabel('Phi_S', fontsize = 11, fontweight = 'bold');
+title('Phi_s vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -162,16 +163,16 @@ grid on;
 %subplot(3, 3, 6);
 nexttile
 plot(x, gamma, color = 'cyan');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
-ylabel('gamma (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Optimum Reacton Velocity vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
+title('Gamma vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 7);
 nexttile
 plot(x, xifr, color = '#E8B320');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
 ylabel('xifr', fontsize = 11, fontweight = 'bold');
 title('Propagating Flux Ratio vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
@@ -180,18 +181,18 @@ grid on;
 %subplot(3, 3, 8);
 nexttile
 plot(x, etam, color = '#26720F');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
-ylabel('Moisture Damping Coefficient (etam)', fontsize = 11, fontweight = 'bold');
-title('Moisture Damping Coefficient vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+ylabel('etam', fontsize = 11, fontweight = 'bold');
+title('Moisture Damping Coef. vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 9);
 nexttile
 plot(x, rtemp1, color = '#970000');
-xlabel('Wind Speed', fontsize = 11, fontweight = 'bold');
-ylabel('FMC / Fuel Moisture of Extinction', fontsize = 11, fontweight = 'bold');
-title('FMC / Fuel Moisture of Extinction vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+ylabel('FMC/FMC Extinction', fontsize = 11, fontweight = 'bold');
+title('FMC/FMC Extinction vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -203,12 +204,13 @@ x = linspace(0, 80, 1000);
 
 % Rate of spread
 %subplot(3, 3, 1);
+figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(3, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, color = 'red');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread', fontsize = 11, fontweight = 'bold');
-title('ROS vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+title('ROS vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -216,9 +218,9 @@ grid on;
 %subplot(3, 3, 2);
 nexttile
 plot(x, ir, color = 'blue');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('Reaction Intensity btu/ft^2 min (IR)', fontsize = 11, fontweight = 'bold');
-title('IR vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('IR', fontsize = 11, fontweight = 'bold');
+title('IR vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -226,9 +228,9 @@ grid on;
 %subplot(3, 3, 3);
 nexttile
 plot(x, qig, color = 'magenta');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('Heat of Preignition (Qig) btu/lb', fontsize = 11, fontweight = 'bold');
-title('Qig vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('Q_{ig} btu/lb', fontsize = 11, fontweight = 'bold');
+title('Qig vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
  
@@ -236,18 +238,18 @@ grid on;
 %subplot(3, 3, 4);
 nexttile
 plot(x, phiw, color = 'green');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('Wind Coefficient (Phiw)', fontsize = 11, fontweight = 'bold');
-title('Wind Coefficient vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
+title('Phi_w vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 5);
 nexttile
 plot(x, phis, color = 'black');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('Slope Coefficient (PhiS)', fontsize = 11, fontweight = 'bold');
-title('Slope Coefficient vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('Phi_S', fontsize = 11, fontweight = 'bold');
+title('Phi_s vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -255,36 +257,36 @@ grid on;
 %subplot(3, 3, 6);
 nexttile
 plot(x, gamma, color = 'cyan');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('Optimum Reaction Velocity (gamma) (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Optimum Reacton Velocity vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
+title('Gamma vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 7);
 nexttile
 plot(x, xifr, color = '#E8B320');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('Propagating Flux Ratio (xifr)', fontsize = 11, fontweight = 'bold');
-title('Propagating Flux Ratio vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('xifr', fontsize = 11, fontweight = 'bold');
+title('Propagating Flux Ratio vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 8);
 nexttile
 plot(x, etam, color = '#26720F');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('Moisture Damping Coefficient (etam)', fontsize = 11, fontweight = 'bold');
-title('Moisture Damping Coefficient vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('etam', fontsize = 11, fontweight = 'bold');
+title('Moisture Damping Coef. vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 9);
 nexttile
 plot(x, rtemp1, color = '#970000');
-xlabel('Slope (Degrees)', fontsize = 11, fontweight = 'bold');
-ylabel('FMC / Fuel Moisture of Extinction', fontsize = 11, fontweight = 'bold');
-title('FMC / Fuel Moisture of Extinction vs. Slope (Degrees) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('FMC/FMC Extinction', fontsize = 11, fontweight = 'bold');
+title('FMC/FMC Extinction vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -296,12 +298,13 @@ x = linspace(0, 20, 1000);
 
 % Rate of spread
 %subplot(3, 3, 1);
+figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(3, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, color = 'red');
 xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread', fontsize = 11, fontweight = 'bold');
-title('ROS vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+title('ROS vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -310,8 +313,8 @@ grid on;
 nexttile
 plot(x, ir, color = 'blue');
 xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('Reaction Intensity btu/ft^2 min (IR)', fontsize = 11, fontweight = 'bold');
-title('IR vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+ylabel('IR', fontsize = 11, fontweight = 'bold');
+title('IR vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -320,8 +323,8 @@ grid on;
 nexttile
 plot(x, qig, color = 'magenta');
 xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('Heat of Preignition (Qig) btu/lb', fontsize = 11, fontweight = 'bold');
-title('Qig vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+ylabel('Q_{ig} btu/lb', fontsize = 11, fontweight = 'bold');
+title('Qig vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
  
@@ -330,8 +333,8 @@ grid on;
 nexttile
 plot(x, phiw, color = 'green');
 xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('Wind Coefficient (Phiw)', fontsize = 11, fontweight = 'bold');
-title('Wind Coefficient vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
+title('Phi_w vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -339,8 +342,8 @@ grid on;
 nexttile
 plot(x, phis, color = 'black');
 xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('Slope Coefficient (PhiS)', fontsize = 11, fontweight = 'bold');
-title('Slope Coefficient vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+ylabel('Phi_S', fontsize = 11, fontweight = 'bold');
+title('Phi_s vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -348,36 +351,36 @@ grid on;
 %subplot(3, 3, 6);
 nexttile
 plot(x, gamma, color = 'cyan');
-xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('Optimum Reaction Velocity (gamma) (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Optimum Reacton Velocity vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
+title('Gamma vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 7);
 nexttile
 plot(x, xifr, color = '#E8B320');
-xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('Propagating Flux Ratio (xifr)', fontsize = 11, fontweight = 'bold');
-title('Propagating Flux Ratio vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('xifr', fontsize = 11, fontweight = 'bold');
+title('Propagating Flux Ratio vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 8);
 nexttile
 plot(x, etam, color = '#26720F');
-xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('Moisture Damping Coefficient (etam)', fontsize = 11, fontweight = 'bold');
-title('Moisture Damping Coefficient vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('etam', fontsize = 11, fontweight = 'bold');
+title('Moisture Damping Coef. vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 9);
 nexttile
 plot(x, rtemp1, color = '#970000');
-xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
-ylabel('FMC / Fuel Moisture of Extinction', fontsize = 11, fontweight = 'bold');
-title('FMC / Fuel Moisture of Extinction vs. Fuel Height (m) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('FMC/FMC Extinction', fontsize = 11, fontweight = 'bold');
+title('FMC/FMC Extinction vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -390,12 +393,13 @@ x = linspace(0, 0.969, 1000);
 
 % Rate of spread
 %subplot(3, 3, 1);
+figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(3, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, color = 'red');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
+xlabel('Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread', fontsize = 11, fontweight = 'bold');
-title('ROS vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+title('ROS vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -403,9 +407,9 @@ grid on;
 %subplot(3, 3, 2);
 nexttile
 plot(x, ir, color = 'blue');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('Reaction Intensity btu/ft^2 min (IR)', fontsize = 11, fontweight = 'bold');
-title('IR vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
+ylabel('IR', fontsize = 11, fontweight = 'bold');
+title('IR vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -413,9 +417,9 @@ grid on;
 %subplot(3, 3, 3);
 nexttile
 plot(x, qig, color = 'magenta');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('Heat of Preignition (Qig) btu/lb', fontsize = 11, fontweight = 'bold');
-title('Qig vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
+ylabel('Q_{ig} btu/lb', fontsize = 11, fontweight = 'bold');
+title('Qig vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
  
@@ -423,18 +427,18 @@ grid on;
 %subplot(3, 3, 4);
 nexttile
 plot(x, phiw, color = 'green');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('Wind Coefficient (Phiw)', fontsize = 11, fontweight = 'bold');
-title('Wind Coefficient vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
+ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
+title('Phi_w vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 5);
 nexttile
 plot(x, phis, color = 'black');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('Slope Coefficient (PhiS)', fontsize = 11, fontweight = 'bold');
-title('Slope Coefficient vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
+ylabel('Phi_S', fontsize = 11, fontweight = 'bold');
+title('Phi_s vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -442,40 +446,40 @@ grid on;
 %subplot(3, 3, 6);
 nexttile
 plot(x, gamma, color = 'cyan');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('Optimum Reaction Velocity (gamma) (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Optimum Reacton Velocity vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
+title('Gamma vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 7);
 nexttile
 plot(x, xifr, color = '#E8B320');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('Propagating Flux Ratio (xifr)', fontsize = 11, fontweight = 'bold');
-title('Propagating Flux Ratio vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('xifr', fontsize = 11, fontweight = 'bold');
+title('Propagating Flux Ratio vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 8);
 nexttile
 plot(x, etam, color = '#26720F');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('Moisture Damping Coefficient (etam)', fontsize = 11, fontweight = 'bold');
-title('Moisture Damping Coefficient vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('etam', fontsize = 11, fontweight = 'bold');
+title('Moisture Damping Coef. vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 9);
 nexttile
 plot(x, rtemp1, color = '#970000');
-xlabel('Dead Fuel Load (Kg/m^2)', fontsize = 11, fontweight = 'bold');
-ylabel('FMC / Fuel Moisture of Extinction', fontsize = 11, fontweight = 'bold');
-title('FMC / Fuel Moisture of Extinction vs. Fuel Load (Kg/m^2) ', fontsize = 10, fontweight = 'bold');
+xlabel('Slope', fontsize = 11, fontweight = 'bold');
+ylabel('FMC/FMC Extinction', fontsize = 11, fontweight = 'bold');
+title('FMC/FMC Extinction vs. Fuel Load (Kg/m^2)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
-sgtitle('Dead Fuel Load (Kg/m^2) vs. ROS, ir, qig, phiw, phis, gamma, xifr, etam, rtemp1', fontsize = 18, fontweight = 'bold')
+sgtitle('Fuel Load (Kg/m^2) vs. ROS, ir, qig, phiw, phis, gamma, xifr, etam, rtemp1', fontsize = 18, fontweight = 'bold')
 %% Testing the Fuel Moisture no slope no wind
 x = linspace(0, .12, 1000);
 [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(1), 0, 0, x);
@@ -483,12 +487,13 @@ x = x .* 100;
 
 % Rate of spread
 %subplot(3, 3, 1);
+figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(3, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, color = 'red');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread', fontsize = 11, fontweight = 'bold');
-title('ROS vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+title('ROS vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -497,8 +502,8 @@ grid on;
 nexttile
 plot(x, ir, color = 'blue');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('Reaction Intensity btu/ft^2 min (IR)', fontsize = 11, fontweight = 'bold');
-title('IR vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('IR', fontsize = 11, fontweight = 'bold');
+title('IR vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -507,8 +512,8 @@ grid on;
 nexttile
 plot(x, qig, color = 'magenta');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('Heat of Preignition (Qig) btu/lb', fontsize = 11, fontweight = 'bold');
-title('Qig vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('Q_{ig} btu/lb', fontsize = 11, fontweight = 'bold');
+title('Qig vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
  
@@ -517,8 +522,8 @@ grid on;
 nexttile
 plot(x, phiw, color = 'green');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('Wind Coefficient (Phiw)', fontsize = 11, fontweight = 'bold');
-title('Wind Coefficient vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
+title('Phi_w vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -526,8 +531,8 @@ grid on;
 nexttile
 plot(x, phis, color = 'black');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('Slope Coefficient (PhiS)', fontsize = 11, fontweight = 'bold');
-title('Slope Coefficient vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('Phi_S', fontsize = 11, fontweight = 'bold');
+title('Phi_s vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -536,8 +541,8 @@ grid on;
 nexttile
 plot(x, gamma, color = 'cyan');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('Optimum Reaction Velocity (gamma) (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Optimum Reacton Velocity vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
+title('Gamma vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -545,8 +550,8 @@ grid on;
 nexttile
 plot(x, xifr, color = '#E8B320');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('Propagating Flux Ratio (xifr)', fontsize = 11, fontweight = 'bold');
-title('Propagating Flux Ratio vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('xifr', fontsize = 11, fontweight = 'bold');
+title('Propagating Flux Ratio vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -554,8 +559,8 @@ grid on;
 nexttile
 plot(x, etam, color = '#26720F');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('Moisture Damping Coefficient (etam)', fontsize = 11, fontweight = 'bold');
-title('Moisture Damping Coefficient vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('etam', fontsize = 11, fontweight = 'bold');
+title('Moisture Damping Coef. vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -563,8 +568,8 @@ grid on;
 nexttile
 plot(x, rtemp1, color = '#970000');
 xlabel('Fuel Moisture %', fontsize = 11, fontweight = 'bold');
-ylabel('FMC / Fuel Moisture of Extinction', fontsize = 11, fontweight = 'bold');
-title('FMC / Fuel Moisture of Extinction vs. Fuel Moisture Values', fontsize = 10, fontweight = 'bold');
+ylabel('FMC/FMC Extinction', fontsize = 11, fontweight = 'bold');
+title('FMC/FMC Extinction vs. Fuel Moisture', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -576,6 +581,7 @@ x = x .* 100;
 
 % Rate of spread
 %subplot(3, 3, 1);
+figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(3, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, color = 'red');
@@ -590,7 +596,7 @@ grid on;
 nexttile
 plot(x, ir, color = 'blue');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('Reaction Intensity btu/ft^2 min (IR)', fontsize = 11, fontweight = 'bold');
+ylabel('IR', fontsize = 11, fontweight = 'bold');
 title('IR vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
@@ -600,7 +606,7 @@ grid on;
 nexttile
 plot(x, qig, color = 'magenta');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('Heat of Preignition (Qig) btu/lb', fontsize = 11, fontweight = 'bold');
+ylabel('Q_{ig} btu/lb', fontsize = 11, fontweight = 'bold');
 title('Qig vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
@@ -610,8 +616,8 @@ grid on;
 nexttile
 plot(x, phiw, color = 'green');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('Wind Coefficient (Phiw)', fontsize = 11, fontweight = 'bold');
-title('Wind Coefficient vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
+title('Phi_w vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -619,8 +625,8 @@ grid on;
 nexttile
 plot(x, phis, color = 'black');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('Slope Coefficient (PhiS)', fontsize = 11, fontweight = 'bold');
-title('Slope Coefficient vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+ylabel('Phi_S', fontsize = 11, fontweight = 'bold');
+title('Phi_s vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -629,8 +635,8 @@ grid on;
 nexttile
 plot(x, gamma, color = 'cyan');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('Optimum Reaction Velocity (gamma) (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Optimum Reacton Velocity vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
+title('Gamma vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -638,7 +644,7 @@ grid on;
 nexttile
 plot(x, xifr, color = '#E8B320');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('Propagating Flux Ratio (xifr)', fontsize = 11, fontweight = 'bold');
+ylabel('xifr', fontsize = 11, fontweight = 'bold');
 title('Propagating Flux Ratio vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
@@ -647,8 +653,8 @@ grid on;
 nexttile
 plot(x, etam, color = '#26720F');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('Moisture Damping Coefficient (etam)', fontsize = 11, fontweight = 'bold');
-title('Moisture Damping Coefficient vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+ylabel('etam', fontsize = 11, fontweight = 'bold');
+title('Moisture Damping Coef. vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
@@ -656,8 +662,8 @@ grid on;
 nexttile
 plot(x, rtemp1, color = '#970000');
 xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
-ylabel('FMC / Fuel Moisture of Extinction', fontsize = 11, fontweight = 'bold');
-title('FMC / Fuel Moisture of Extinction vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+ylabel('FMC/FMC Extinction', fontsize = 11, fontweight = 'bold');
+title('FMC/FMC Extinction vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
