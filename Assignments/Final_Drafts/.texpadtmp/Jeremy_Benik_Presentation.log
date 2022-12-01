@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.3)  27 NOV 2022 14:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.3)  28 NOV 2022 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -753,20 +753,25 @@ Package caption Info: End \AtBeginDocument code.
  (/Users/jeremybenik/Research_Files/164/Assignments/Final_Drafts/.texpadtmp/Jeremy_Benik_Presentation.nav) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 37.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 41.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 ) [2
 
-] [3
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <40> not available
+(Font)              size <42.99> substituted on input line 47.
+
+[3
 
 ] [4
 
@@ -788,132 +793,144 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 
 ] [13
 
+] [14
+
+] [15
+
+] [16
+
+] [17
+
+] [18
+
 ]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png, id=390, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png, id=520, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png  used on input line 266.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png  used on input line 314.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png, id=391, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png, id=521, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png  used on input line 266.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png  used on input line 314.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
- [14
+ [19
 
  </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png (PNG copy)>]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png, id=419, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png, id=550, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png  used on input line 286.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png  used on input line 335.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.286 \end{frame}
+l.335 \end{frame}
                  
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png, id=420, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png, id=551, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png  used on input line 286.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png  used on input line 335.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.286 \end{frame}
-                  [15
+l.335 \end{frame}
+                  [20
 
  </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png (PNG copy)>]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png, id=446, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png, id=578, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png  used on input line 306.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png  used on input line 355.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.306 \end{frame}
+l.355 \end{frame}
                  
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png, id=447, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png, id=579, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png  used on input line 306.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png  used on input line 355.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.306 \end{frame}
-                  [16
+l.355 \end{frame}
+                  [21
 
  </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png (PNG copy)>]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png, id=474, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png, id=605, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png  used on input line 317.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png  used on input line 366.
 (pdftex.def)             Requested size: 240.8896pt x 180.6672pt.
- [17
+ [22
 
  </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png (PNG copy)>]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png, id=501, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png, id=632, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png  used on input line 336.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png  used on input line 385.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.336 \end{frame}
+l.385 \end{frame}
                  
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png, id=502, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png, id=633, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png  used on input line 336.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png  used on input line 385.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.336 \end{frame}
-                  [18
+l.385 \end{frame}
+                  [23
 
  </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png (PNG copy)>]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png, id=528, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png, id=659, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png  used on input line 355.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png  used on input line 404.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.355 \end{frame}
+l.404 \end{frame}
                  
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png, id=529, 1606.0pt x 1204.5pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png, id=660, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png  used on input line 355.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png  used on input line 404.
 (pdftex.def)             Requested size: 153.64493pt x 115.219pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:test2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.355 \end{frame}
-                  [19
+l.404 \end{frame}
+                  [24
 
  </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png (PNG copy)>]
-<bib.png, id=556, 760.8425pt x 277.035pt>
+<bib.png, id=687, 760.8425pt x 277.035pt>
 File: bib.png Graphic file (type png)
 <use bib.png>
-Package pdftex.def Info: bib.png  used on input line 363.
+Package pdftex.def Info: bib.png  used on input line 412.
 (pdftex.def)             Requested size: 304.3316pt x 110.81203pt.
- [20
+ [25
 
- <./bib.png>] [21
+ <./bib.png>] [26
+
+] [27
 
 ]
 \tf@nav=\write6
@@ -927,24 +944,28 @@ Package pdftex.def Info: bib.png  used on input line 363.
 
  (/Users/jeremybenik/Research_Files/164/Assignments/Final_Drafts/.texpadtmp/Jeremy_Benik_Presentation.aux)
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 2.99pt have occurred.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Jeremy_Benik_Presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23602 strings out of 478268
- 464787 string characters out of 5846347
- 707213 words of memory out of 5000000
- 41253 multiletter control sequences out of 15000+600000
- 477220 words of font info for 56 fonts, out of 8000000 for 9000
+ 23680 strings out of 478268
+ 466221 string characters out of 5846347
+ 707286 words of memory out of 5000000
+ 41312 multiletter control sequences out of 15000+600000
+ 481183 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,122p,449b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on /Users/jeremybenik/Research_Files/164/Assignments/Final_Drafts/.texpadtmp/Jeremy_Benik_Presentation.pdf (21 pages, 1607716 bytes).
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on /Users/jeremybenik/Research_Files/164/Assignments/Final_Drafts/.texpadtmp/Jeremy_Benik_Presentation.pdf (27 pages, 1643341 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 609 compressed objects within 7 object streams
- 75 named destinations out of 1000 (max. 500000)
+ 855 PDF objects out of 1000 (max. 8388607)
+ 767 compressed objects within 8 object streams
+ 90 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 

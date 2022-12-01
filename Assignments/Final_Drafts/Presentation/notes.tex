@@ -1,0 +1,305 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[square]{natbib}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage[top=2cm,bottom=2cm,right=2.5cm,left=2.5cm]{geometry}
+
+\begin{document}
+\title{Notes}
+\author{By: Jeremy Benik}
+\maketitle
+
+\section{Results}
+\subsection{Rothermel Model}
+\subsubsection{Initial Rate of Spread Equation}
+
+The initial Rothermel model was based on the heat balance model developed by Fransden (1971) and can be see in equation \ref{Equation 1}
+\begin{equation}
+R = \frac {I_{xig} + \int_{-\infty}^{0} (\frac {\partial I_{z}} {\partial z})_{z_c}\,dx }{\rho_{be} * Q_{i_g}}
+\label{Equation 1}
+\end{equation}
+Where R = Quasi-steady rate of spread, ft./min. 
+
+\noindent I$_{xig}$ = horizontal heat flux absorbed by a unit volume of fuel at the time of ignition, $B.t.u/ft.^2$ -min 
+
+\noindent $\rho_{be}$ = Effective bulk density(the amount of fuel per unit volume of the fuel bed raised to ignition ahead of the advancing fire), lb./ft.3 
+
+\noindent $Q_{ig}$ = heat of preignition (the heat required to bring a unit weight of fuel to ignition),. B.T.U./lb 
+
+\noindent $(\frac {\partial {I_z}} {\partial z})_{z_c}$ = The gradient of the vertical intensity evaluated at a plane at a constant depth, $z_c$, of the fuel bed, $B.t.u./ft.^3 -min$ 
+
+\subsubsection{Heat of Preignition $Q_{ig}$}
+\indent The first equation evaluated was the heat of preignition $Q_{ig}$. This term was "evaluated analytically for cellulosic fuels by considering the change in specific heat from ambient to ignition temperature and the latent heat of vaporization of the moisture" \citep{Rothermel1972}. This resulted in equation \ref{Equation 2}
+\begin{equation}
+	Q_{ig} = C_{pd}\Delta T + M_f (C_{pw} \Delta T_B + V)
+	\label{Equation 2}
+\end{equation}
+Where: \\
+$C_{pd}$ = Specific heat of dry wood. \\
+$\Delta T_{ig}$ = temperature range to ignition \\
+$M_f$ = fuel moisture. lb. water/lb. dry wood. \\
+$C_{pw}$ = specific heat of water. \\
+$\Delta T_B$ = temperature range to boiling. \\
+V = latent heat of vaporization. \\
+
+
+To further reduce this equation down to the final form, an assumption that the temperature to ignition will stay at a constant range from 20$^{\circ}$C to 320$^{\circ}$C and that boiling temperature will remain at 100$^{\circ}$C, and that the fuel will remain a cellulosic fuel, the equation then became: 
+\begin{equation}
+\label{Equation 3}
+	Q_{ig} = 250 + 1116 * M_f. B.T.U/lb. 
+\end{equation}
+\indent These assumptions now take out the need for the temperature range to ignition, latent heat of vaporization, temperature range to boiling, and specific heat of dry wood. With less parameters necessary, the model becomes much more simple and faster (computationally). This also aids in reaching Rothermel's goal of creating a ROS model with as few input parameters as possible. \\
+\indent The next parameter is the effective bulk density. This parameter was calculated experimentally using thermocouples laid out in a fuel bed. The effective bulk density is used in the final rate of spread equation with no wind and no slope (r0). \\
+\subsubsection{Reaction Intensity $I_R$}
+\indent The next parameter is the reaction intensity. This is by far the hardest to calculate as it is the most complex to derive. To obtain this value, the authors used the weight loss data from the fuels to determine how intense the fire was. This parameter can be expressed as equation \ref{Equation 4}.
+\begin{equation}
+	\label{Equation 4}
+	I_R = - (\frac {\mathrm {d}w} {\mathrm{d} x}) (\frac {\mathrm {d}x} {\mathrm{d} t}) h 
+\end{equation}\\
+Where :\\
+$\frac {\mathrm {d}x} {\mathrm{d} t}$ = R, the quasi steady state rate of spread. 
+
+
+\indent By integrating the equation with respect to the reaction zone depth D, that results in equation \ref{Equation 5}
+\begin{equation}
+	\label{Equation 5}
+	I_R D = Rh (W_n - W_r)
+\end{equation}\\
+Where: \\
+D = reaction zone depth (front to rear). ft. \\
+$W_n$ = net initial fuel loading. lb./$ft. ^ 2$ \\
+$W_r$ = residue loading immediately after passage of the reaction zone. lb./$ft. ^ 2$ \\
+\indent Equation \ref{Equation 5} does not account for minerals or water content so the formula was later adjusted to account for that. \\
+\subsubsection{Reaction Velocity}
+\indent The next step in creating the model was to find the reaction velocity. The reaction velocity is the ratio of the reaction zone efficiency to the reaction time and can be represented by equation \ref{Equation 6}.
+\begin{equation}
+	\label{Equation 6}
+	\Gamma \equiv \frac {\eta _ \delta} {\tau _ R}
+\end{equation}
+\indent To fully utilize the reaction velocity, the fuel moisture and the mineral content must be known as that would lead to a slower reaction velocity if there is more moisture within the fuel or more noncombustibles (minerals). By incorporating both the moisture content and the mineral content as a damping coefficient, the equation then becomes: 
+\begin{equation}
+	\label{Equation 7}
+	\Gamma = \Gamma ^ {'} \eta _ M \eta _ s
+\end{equation}
+Where: \\
+ $\Gamma ^ {'}$ = potential reaction velocity. $min ^ {-1}$ \\ 
+ $\eta _ M$ = moisture damping coefficient having values ranging from 1 to 0, dimensionless. \\
+ $\eta _ s$ = mineral damping coefficient having values ranging from 1 to 0, dimensionless. \\
+ \subsubsection{Moisture and Mineral Damping Coefficient}
+\indent The moisture and mineral damping coefficients as well as the reaction velocity need to be found through experimentation. To find the moisture damping coefficient, three fuel beds of ponderosa pine needles were tested over a wide moisture range. They found the moisture damping coefficient is dependent not only on the moisture but the fuel type as well since logging slash is much more porous and carries more moisture. To obtain the equation for the moisture damping coefficient the authors created a plot (as seen in Figure \ref{rothermel_moistures_damping}) by comparing the fuel moisture of extinction (where the fire will no longer spread) to the fuel moisture. They then fit the curve and set that as the equation for the moisture damping coefficient. 
+
+ \indent To find the mineral damping coefficient, the authors assumed the ratio of the "normalized decomposition rate would be the same as the normalized reaction intensity" \citep{Rothermel1972}. They then used the maximum decomposition rate and found the mineral content was at 0.0001 which was the lowest fractional mineral content for natural fuels. By then looking into silica-free ash, the authors were able to create another plot as seen in Figure \ref{rothermel_mineral_damping_coef}. They then found the equation fitting the curve and set that as the mineral damping coefficient. To find the damping coefficient, all the user needs to input is the effective mineral content (silica free). \\
+
+ \subsubsection{Fuel Packing Ratio and Surface Area to Volume Ratio}
+ \indent The last parameters are the fuel packing ratio and the surface area to volume ratio. With a high packing ratio, there will be a low air-to-fuel ratio and this will make it difficult for the flame to penetrate to the top of the fuel. A more sparse fuel bed will result in a low intensity fire as there will be significant heat losses between the fuel and flame. Finding the optimal packing ratio to achieve the maximum fire intensity is a challenging task as it is likely different for each fuel. The packing ratio can be defined by equation \ref{Equation 8}.
+ \begin{equation}
+ 	\beta = \frac {\rho _ b } {\rho _ p} 
+ 	\label{Equation 8}
+ \end{equation}
+Where: \\
+$\beta$ = packing ratio, dimensionless. \\
+$\rho _ b$ = fuel array bulk density, lb./ft$^3$ \\
+$\rho _ p$ = fuel particle density, lb./ft$^3$ \\
+
+\indent The surface area to volume ratio (SAVR) for fuels is used to quantify the fuel particle size can be represented by equation \ref{Equation 9}
+\begin{equation}
+	\label{Equation 9}
+	\sigma = \frac {4} {d} 
+\end{equation}
+ Where d = the diameter of the circular particles or edge length of square particles, ft.
+ \subsubsection{Fitting Missing/Unknown Parameters Through Experimentation}
+ \indent With the whole model setup, the next task was to find the parameters that could only be found through experimentation. This includes the parameters in the reaction velocity, and the slope and wind coefficients. To find the reaction velocity parameters, multiple fuel beds were setup on weighing platforms so the weight of the fuel could be constantly measured. This allowed them to determine how fast the fuel was burning since they had multiple weight sensors at each part of the fuel. With this knowledge, they found that the mass loss rate related to the net initial fuel loading, reside loading, and the width of the weighing platform. Combining this with equation \ref{Equation 6} yields equation \ref{Equation 10}.
+ \begin{equation}
+ 	\label{Equation 10}
+ 	\Gamma = \frac {\dot m } {w_n RW \tau _ R} 
+ \end{equation}
+ Where: \\
+ $\dot m$ = mass loss rate obtained from the weight loss data. \\
+ \indent With this final equation, it can then be combined with equation \ref{Equation 7} to get the potential reaction velocity and have it now correlated with the physical features of fuel. 
+ \begin{equation}
+ 	\label{Equation 11}
+ 	\Gamma ^ {'} = \frac {\Gamma} {\eta _ M \eta _ S}
+ \end{equation}
+ 
+\indent With all the equations finally formulated, experiments were then performed using this model and comparing it to the observed ROS. The first parameter tested within the model to observations is the reaction velocity. In particular, they wanted to find the optimum packing ratio and the optimum reaction velocity. After numerous experiments, they found there is an optimum fuel load for each fuel size. To incorporate this into the model, they combined the maximum reaction velocity with the regular reaction velocity equation and an arbitrary variable A was inserted to better fit the observation. The final equation for the reaction velocity then became: 
+\begin{equation}
+	\label{Final Reaction Velocity}
+	\Gamma ^ {'} = \Gamma ^ {'}_{max} (\frac {\beta} {\beta _ {op}}) ^ {A} exp[A(1 - \frac {\beta} {\beta _ {op}})]
+\end{equation}
+Where: \\
+A = $\frac {1} {(4.77 \sigma ^ {.1} - 7.27)}$\\
+\indent These equations were designed to fit not only the dependent variables but also the data obtained in their experimentation. These equations are specifically made for reasonable output values even when the input values may be extreme so the model should never go to negative infinity or go negative. \\
+\indent Next is the propagating flux. To first evaluate the equations, the authors assumed no wind and no slope to make formulating these equations much more simple. The initial equation for the propagating flux can be seen in equation \ref{Propagating flux with i0}.
+\begin{equation}
+	\label{Propagating flux with i0}
+	(I_P)_o = R_0 \rho _ b \epsilon Q_{ig}
+\end{equation}
+Where $\varepsilon$ is a ratio between the propagating flux and reaction intensity. To get the value for $\varepsilon$, the authors used the fuel packing ratio from 3 fuel sizes and fit the data to the curve in Figure \ref{rothermel_eta}
+\subsubsection{Wind and Slope Coefficients}
+\indent To evaluate the wind and slope coefficients, the authors assume that the fuel would remain constant. After performing multiple experiments with varying fuel beds at different wind speeds and using field data, they got the wind coefficient to be a function of SAVR along with many other constants to match observed data. The wind coefficient can be seen in \ref{wind coefficient}. The slope coefficient was calculated by performing experiments on fuel beds at different slopes. They then found a correlation of the data collected from the experiments and used that as the slope factor and this can be seen in \ref{Slope coefficient}.
+\begin{equation}
+	\label{wind coefficient}
+	\phi _ W = C U^{B} (\frac {\beta} {\beta_{op}}) ^ {-E}
+\end{equation}
+\begin{equation}
+	\label{Slope coefficient}
+	\phi _ S = 5.275 \beta ^ {-.3} (tan \phi)^{2}
+\end{equation}
+Where: \\
+C = $7.47 \exp(-0.133 \sigma^{0.55})$ \\
+B = $0.02526 \sigma^{0.54}$\\
+E = $0.715 \exp(-3.59 * 10^{-4} \sigma)$\\
+\subsubsection{Final Rate of Spread Equation}
+\indent The final ROS equation was finally complete and it now incorporates both slope and wind components and is able to be used operationally. There is no longer any calculus needed or any complex calculations. The final equation can be seen in \ref{rothermel final ROS}. 
+\begin{equation}
+	\label{rothermel final ROS} 
+	R = \frac {I_R \zeta (1 + \phi _ W + \phi _ S )} {\rho _ b \epsilon Q_{ig}}
+\end{equation}
+\subsection{Balbi Model}
+\subsubsection*{2007 Balbi Model}
+\indent With multiple versions of the Balbi model, the very first model will be discussed followed by the newest version to see how much the model has changed since the original model. The Balbi model is a fully physical model so there will be no observations used in this paper, only physical properties of fires.
+\subsubsection{Simplified Flow and Flame Tilt Angle}
+\indent The first parameter in the Balbi model is the simplified flow and the flame tilt angle. These parameters are first calculated assuming no slope and no wind conditions (like with Rothermel initially). They assume the main effect of the flow that must be accounted for is the tilting of the flames under wind and/or slope conditions \citep{Balbi2007}. For the initial study they assumes that under no wind and no slope conditions the flame tilt angle $\gamma$ equals $\beta _ w$ which results from the buoyancy and the wind. $\beta _w$ is given by:
+\begin{equation}
+	\label{beta_w}
+	\tan \beta _ w = \frac {\nu _ w} {u_{fl}}
+\end{equation}
+Where:\\
+ $\nu _ w$ and $u_{fl}$ represent the free stream wind speed and the upward gas flow velocity in still air at mid flame height. \\
+\indent With the introduction of a slope, $\gamma$ changes as the gas velocity changes due to indrafts ($\nu _ s$) and the slope angle ($\alpha _0$). The relationship can be seen in equation \ref{gamma} and equation \ref{tan_beta}. 
+\begin{equation}
+	\label{gamma}
+	\gamma = \alpha + \beta _ s
+\end{equation}
+\begin{equation}
+	\label{tan_beta}
+	\tan \beta _ s = \frac {\nu _ s} {u_{fl}}
+\end{equation}
+\indent For circumstances where there are both wind and slope conditions, they assume the gas velocity induced from the slope factor is negligible in regards to the wind speed.
+\subsubsection{Simplified Flame Sub-Model}
+\indent To be able to calculate $\nu _ w$ and $u_{fl}$ and keep the model computationally fast, many simplifying assumptions are made to generate a simple model. The authors split the flame into two different categories, the flame base and the flame body. They then split the calculation up into 6 sections: Flame height, State Equation, Vertical Momentum Equation, Mass Balance, Stoichiometric Ratio, and Thermal Balance. l is the depth and H is its height. The authors used a previous relationship by Sun et al. (2003):
+\begin{equation}
+	\label{Flame height}
+	H = H^{*} Q^{\frac {2}{5}} = H^{*}(\Delta h_{fu} \sigma _{fu} c) ^{\frac {2}{5}}
+\end{equation}
+Where:\\
+H is the flame height.\\
+Q is the rate of heat release per unit length of fire front. \\
+$H^{*}$ is a parameter to fit. \\
+$\Delta h_{fu}$ is the heat of combustion of the vegetative fuel. \\
+$\sigma _{fu}$ is the surface mass. \\
+c is the rate of fire spread.  \\ 
+\indent To calculate this component, they first neglect the shear stresses in the gas and instead use buoyancy as the main mechanism involved in the vertical momentum. this is given by: 
+\begin{equation}
+	\label{Vertical momentum Balbi}
+	\rho _ g \frac {\partial u} {\partial t} = (\rho _a - \rho _g) g
+\end{equation}
+\indent To solve for this equation, simple integration along the flame length results in the gas velocity at mid flame, $u_{fl}$
+\begin{equation}
+	\label{gas velocity}
+	u_{fl} = Q ^ {\frac {1}{5}} \sqrt{(\frac {T_{fl}} {T_a} - 1) g H^{*}}
+\end{equation}
+
+\indent Mass balance is kept simple for the whole flame structure based on the geometry of the flame. In slope and wind conditions, the rate of air entrainment is considered negligible in mass balance. With this assumption, the continuity equation per unit length of the fire can be used and is given by:
+\begin{equation}
+	\label{mass balance balbi}
+	\rho_g u_{fl}l = \rho_{ga} h \nu _u + D \dot{\sigma} _ {fu}
+\end{equation}
+Where the left hand side of the equation is the rate of mass loss from the flame body, $ + D \dot{\sigma} _ {fu}$ is the rate of air entrainment upward in the flame, and $D \dot{\sigma} _ {fu}$ is the rate of mass increase due to the thermal degradation of the vegetation. \\
+\indent The stoichiometric ratio involves the rate of air entrainment upward in the flame and how that is proportional to the rate of mass incoming from thermal degradation, $\upsilon$ being the stoichiometric ratio \citep{Balbi2007}. 
+\begin{equation}
+	\label{stoich ratio}
+	\rho _ a h \nu _ u = \upsilon D \dot{\sigma} _ {fu}
+\end{equation}
+\indent The last parameter in the flame sub model is the thermal balance. The thermal balance calculates the temperature of the flame and has the same assumptions as the continuity equations. After simplifications and rearranging the initial equation, as well as assuming the specific heat is held constant in the flame, fuel gases, and that the fuel gases are emitted near the ambient temperature, the equation for the flame temperature becomes:
+\begin{equation}
+	\label{flame temp balbi 2007}
+	T_{fl} = T_a + \frac {(1 - \chi) Q}{(\upsilon + 1) D \dot{\sigma} _ {fu} c_{pg}} = T_a + \frac {1 - \chi) \Delta h _ {fu} }{(\upsilon + 1) c_{pg}}
+\end{equation}
+\subsubsection{Simplified radiation Sub-Model}
+\indent When a fire front spreads, there is a radiant heat flux impinging on the unburnt fuels ahead of the flame front \citep{Balbi2007}. This component is split up into two different components. The radiative component from the flame base, and the flame body radiation. For the flame base radiation, they assume the emissivity of the flame base is equal to unity \citep{Balbi2007}, which results in:
+\begin{equation}
+	\label{R_b 2007}
+	R_b = \sigma T^{4}_{fl} \mathrm{d}(\delta - x)
+\end{equation}
+Where: $T_{fl}$ is the flame temperature (calculated in equation \ref{flame temp balbi 2007}) $\delta$ = $4/ \alpha _{fu} \zeta _ {fu}$ is the mean penetration distance of radiation within the fuel bed. x is the coordinate in space normal to the fire front and d represents the fuel depth" \citep{Balbi2007}. \\
+
+
+\indent To reduce this equation to be used in a simplified model that is faster than real time, an assumption that the fire front is a flame panel with height H and infinite width from a surface fuel element (Balbi, 2007). The equation then becomes:
+\begin{equation}
+	\label{flame_base_2007}
+	R_{fl} = \epsilon_{fl} \sigma \frac {T^{4}_{fl}} {2} (1 - \cos \theta)
+\end{equation}
+Where $\theta $ is the angle between the base of the flame panel and the element of surface fuel. 
+\subsubsection{Preheating Sub-Model}
+\indent This is the last submodel in the 2007 Balbi model. In this submodel, the authors introduce the relationship for the ROS under Low Speed Regimes, Relationship for the ROS under High Speed Regimes, and a simplified model of fire spread under high speed regimes. The major assumption made here is the radiation is denoted as the prevailing form of heat transfer in fire spread. Like with the Rothermel model, calculations are first made with no wind no slope conditions to simplify calculations and those parameters are added in later. With no wind no slope conditions, the fire propagation will remain relatively constant  for a given fuel. Whereas with wind or a slope, that will introduce a flame tilt and thus preheat the fuels ahead of the fire much more effectively. The base equation for the preheating sub model is as follows:
+\begin{equation}
+	\label{preheating sub mode 2007}
+	\sigma _ {fu} c _{pfu} \frac {\mathrm{d} T_{fu}} {\mathrm{d} t} = R_b + R_{fl} - \Delta h_w \frac {\mathrm{d} \sigma _ w } {\mathrm {d} t}
+\end{equation}
+Equation \ref{preheating sub mode 2007} represents the thermal balance for the unburned fuel ahead of the fire front. \\
+\indent Under a low speed regime, $\gamma$ will likely remain close to 90$^{\circ}$ as there is no slope or little to no wind pushing the flame closer to the unburnt fuel. As a result, $R_{fl}$ can be neglected in this case and equation \ref{preheating sub mode 2007} can be solved with neglecting the flame body radiation. After substitutions and some manipulation of the equation above, the resulting equation is:
+\begin{equation}
+	\label{low regime ros}
+	c_1 = \frac {\sigma T^{4}_{fl} \mathrm {d} \delta ^ 2} {2 \sigma _ {fu} (c_{pfu}(T_{ig} - T_a) + \Delta h _ w \eta)}
+\end{equation}
+Where:\\
+$c_1$ = constant ROS. 
+dx = $c_1 \mathrm{d}t$
+$\eta$ = moisture content defined by $\eta = \sigma _ w / \sigma _ {fu}$ \\
+\indent On the other hand, with a high speed regime, the flame body radiation is assumed to be the main form of heat transfer to the unburned fuels. As a result, $R_b$ is negligible and can be omitted in these calculations. By assuming that the ROS is constant over the space interval from 0 to $H \sin \gamma$, equation \ref{preheating sub mode 2007} can be integrated and solved as:
+\begin{equation}
+	\label{high speed regimes}
+	c_h = c_l  + \frac {\epsilon _{fl} \sigma T^{4}_{fl} H} {2 \sigma _ {fu} (c_{pfu}(T_{ig} - T_a) + \Delta h _ w \eta)} (1 + \sin \gamma - \cos \gamma)
+\end{equation}
+\indent Sine $c_l$ is negligible as the flame body is the main contributor to the ROS, it can be removed from equation \ref{high speed regimes}.\\
+\indent The final parameter is the simplified model of fire spread under high-speed regimes. First the authors define how much heat is actually transferred from the flame to the unburnt fuel. This is given by:
+\begin{equation}
+	\label{high speed regimes 2007}
+	\varepsilon_{fl} \sigma T^{4}_{fl} = \chi Q / H
+\end{equation} 
+To further reduce this model to reach the final form, the fraction of radiation $\chi$ decreases with flame width according to a parameter q that must be fitted in experimentation later on \citep{Balbi2007}. 
+\indent Now all that is left for the model is validating it using lab and experimental burns and fitting parameters. Some of the parameters they found remained relatively constant throughout the different burns (q = 3), but the other parameters varied with different fuels characteristics. Such as A depends mostly on the fuel moisture, $b_s$ and $b_w$ depend on the fuel surface mass. $c_l$ depends on the optical depth, moisture content and the volume mass. 
+
+\subsubsection{Wind and Slope}
+
+ After comparing the model to numerous datasets, the authors kept getting different values for the wind and slope coefficients (which they expected). They found these parameters vary with different fuel properties. With a greater fuel height, fuel load, and SAVR, then there would be more fuel to burn and the flame body radiation can reach the fuel much more effectively. With a greater FMC, then the flame would take more energy to dry out the fuel, slowing down the ROS. 
+\subsubsection*{2022 Balbi Model}
+\begin{equation}
+	\label{convection intro}
+	\phi _ c = \frac {\Delta H} {2 \tau _ 0} \sigma s min(h, \delta) \tan \gamma _ c
+\end{equation}
+Where: \\
+$\Delta H$ and $\tau _ 0$ are the heat of combustion of pyrolysis gases and the flame residence time parameter \citep{Chatelon2022}.\\
+\indent The angle $\gamma _ {c}$ is defined as :
+\begin{equation}
+	\tan \gamma _ {c} = \tan \alpha + \frac {U(L)} {u_{c}}
+\end{equation}. 
+Where U(L), $u_c$, and $\alpha$ are horizontal wind speeds at point B \citep{Chatelon2022}. U(L) is further expressed as a function of the wind velocity at mid flame and accounts for drag forces. After some simplifications and substitutions, the authors found the final equation for the convective component $R_c$: \\
+\begin{equation}
+	\label{convective component}
+	R_c = a_M min(\frac {W_0}{50}, 1) \frac {\Delta H \rho _ a T_a s \sqrt{h}}{2q(s_t + 1) \rho _ v T} (\frac {(s_t + 1) \rho _ v T}{\tau _ 0 \rho _ a T_a} min(S, \frac {2 \pi S}{S_t} \tan \alpha + U \exp (- \frac {\beta _ t}{min(\frac{W_0}{50}, 1)} R))
+\end{equation}
+Where: \\
+$R_c$ = Contribution of convection to the ROS ($m/s$).\\
+$a_M$ = Fitted model parameter. \\
+$W_0$ = Ignition line width (m). \\
+$\Delta H$ = Heat of combustion of the pyrolysis gases ($J / kg$). \\
+$\rho _ a$ = Air Density ($kg/m^3$) \\
+$T_a$ = Air Temperature (K) \\
+h = Fuel bed depth (m) \\
+q = Ignition Energy ($J / kg$) \\
+$s_t$ = Air pyrolysis gases mass ratio in the flame body. \\
+$\rho _ v$ = Fuel Density ($kg/m^3$) \\
+T = Mean flame temperature (K)\\
+$\tau _ 0$ = Flame residence time parameter ($s / m$) \\
+S = Leaf area by square meter ($m^ 2 / m^2$) \\
+$\alpha$ = Terrain slope angle (degrees)\\
+U = Sum of normal component (to the fire front) of the natural wind velocity and fire generated inflow coming from the burnt area ($m / s$). \\
+$\beta _ t$ = Total packing ratio. \\
+R = Rate of Spread ($m / s$). \\
+
+\end{document}

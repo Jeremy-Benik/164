@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.3)  3 NOV 2022 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.3)  28 NOV 2022 20:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -243,11 +243,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box52
-) (/Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.aux
-
-LaTeX Warning: Label `rothermel_mineral_damping' multiply defined.
-
-)
+) (/Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.aux)
 \openout1 = `Rough_Draft.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -380,242 +376,265 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--80
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 85.
+(hyperref)                removing `subscript' on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 87.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 102--105
+Underfull \hbox (badness 10000) in paragraph at lines 92--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 105.
+(hyperref)                removing `math shift' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 105.
+(hyperref)                removing `subscript' on input line 109.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 105.
+(hyperref)                removing `math shift' on input line 109.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--123
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--138
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
 
  []
 
 [6]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png, id=241, 559.08875pt x 630.355pt>
-File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png Graphic file (type png)
-<use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png  used on input line 141.
-(pdftex.def)             Requested size: 223.63153pt x 252.13753pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png, id=244, 634.37pt x 587.19376pt>
-File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png Graphic file (type png)
-<use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png  used on input line 148.
-(pdftex.def)             Requested size: 253.7435pt x 234.87334pt.
-
-
-LaTeX Warning: Reference `Equation 8' on page 7 undefined on input line 153.
-
-[7 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 156--161
+Underfull \hbox (badness 10000) in paragraph at lines 139--144
 
  []
 
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png, id=252, 559.08875pt x 630.355pt>
+File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png Graphic file (type png)
+<use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png  used on input line 148.
+(pdftex.def)             Requested size: 223.63153pt x 252.13753pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png, id=257, 634.37pt x 587.19376pt>
+File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png Graphic file (type png)
+<use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png  used on input line 156.
+(pdftex.def)             Requested size: 253.7435pt x 234.87334pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/moisture_damping.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 165--170
 
  []
 
 [8 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png>]
-
-LaTeX Warning: Reference `rothermel_eta' on page 9 undefined on input line 195.
-
-File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png Graphic file (type png)
-<use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/mineral_content.png  used on input line 197.
-(pdftex.def)             Requested size: 253.7435pt x 234.87334pt.
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/eta.png, id=283, 675.52374pt x 746.79pt>
+File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/eta.png Graphic file (type png)
+<use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/eta.png>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/eta.png  used on input line 207.
+(pdftex.def)             Requested size: 270.20471pt x 298.7107pt.
+ [9 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/eta.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 220--225
 
  []
 
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png, id=284, 490.83376pt x 415.5525pt>
+[10]
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png, id=313, 490.83376pt x 415.5525pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png  used on input line 257.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png  used on input line 268.
 (pdftex.def)             Requested size: 196.33002pt x 166.21805pt.
-[10] [11 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 328--331
+ [11 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_flame_height.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
 
  []
 
 [12]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png, id=323, 513.92pt x 283.0575pt>
+Underfull \hbox (badness 10000) in paragraph at lines 341--344
+
+ []
+
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png, id=355, 513.92pt x 283.0575pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png  used on input line 334.
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png  used on input line 352.
 (pdftex.def)             Requested size: 308.35437pt x 169.8358pt.
- [13 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 349--351
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--373
+Underfull \hbox (badness 10000) in paragraph at lines 372--391
 
  []
 
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png, id=335, 3468.96pt x 2065.7175pt>
+[14 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/balbi_diagram.png>]
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png, id=382, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png  used on input line 379.
-(pdftex.def)             Requested size: 450.98064pt x 268.5527pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png, id=336, 1124.2pt x 843.15pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png  used on input line 406.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png, id=383, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png  used on input line 380.
-(pdftex.def)             Requested size: 224.83601pt x 168.627pt.
-[14] [15 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png (PNG copy)>]
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png, id=349, 3468.96pt x 2065.7175pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png  used on input line 407.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png, id=385, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png  used on input line 389.
-(pdftex.def)             Requested size: 450.98064pt x 268.5527pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png, id=350, 1124.2pt x 843.15pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png  used on input line 416.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png, id=386, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png  used on input line 390.
-(pdftex.def)             Requested size: 224.83601pt x 168.627pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png, id=354, 3234.0825pt x 1991.44pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png  used on input line 417.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png, id=394, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png  used on input line 400.
-(pdftex.def)             Requested size: 420.44548pt x 258.89629pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png, id=355, 1124.2pt x 843.15pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png  used on input line 429.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png, id=395, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png  used on input line 401.
-(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
- [16 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png  used on input line 430.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+[15]
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png, id=365, 3468.96pt x 2065.7175pt>
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png, id=407, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png  used on input line 411.
-(pdftex.def)             Requested size: 472.03123pt x 281.06625pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png, id=366, 1124.2pt x 843.15pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png  used on input line 439.
+(pdftex.def)             Requested size: 472.03123pt x 354.0195pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png, id=408, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png  used on input line 412.
-(pdftex.def)             Requested size: 472.03123pt x 354.01765pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png, id=368, 3468.96pt x 2065.7175pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png  used on input line 440.
+(pdftex.def)             Requested size: 472.03123pt x 354.0195pt.
+
+LaTeX Warning: Float too large for page by 61.88002pt on input line 443.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png, id=410, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png  used on input line 421.
-(pdftex.def)             Requested size: 450.98064pt x 268.5527pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png, id=370, 3468.96pt x 2065.7175pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png  used on input line 452.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png, id=411, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png  used on input line 430.
-(pdftex.def)             Requested size: 450.98064pt x 268.5527pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png, id=371, 1124.2pt x 843.15pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png  used on input line 463.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png, id=412, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png  used on input line 431.
-(pdftex.def)             Requested size: 224.83601pt x 168.627pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png, id=373, 3468.96pt x 2065.7175pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png  used on input line 464.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png, id=414, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png  used on input line 440.
-(pdftex.def)             Requested size: 450.98064pt x 268.5527pt.
-</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png, id=374, 1124.2pt x 843.15pt>
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png  used on input line 473.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+</Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png, id=415, 1606.0pt x 1204.5pt>
 File: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png Graphic file (type png)
 <use /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png>
-Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png  used on input line 441.
-(pdftex.def)             Requested size: 224.83601pt x 168.627pt.
-[17] [18 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png (PNG copy)>] [19 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png (PNG copy)>] [20 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png (PNG copy)>] [21 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png (PNG copy)>] [22 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png (PNG copy)>] (/Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.bbl)
-Underfull \hbox (badness 10000) in paragraph at lines 485--495
+Package pdftex.def Info: /Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png  used on input line 474.
+(pdftex.def)             Requested size: 401.49902pt x 301.12427pt.
+[16] (/Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.bbl)
+Underfull \hbox (badness 10000) in paragraph at lines 527--537
 
  []
 
 
-Overfull \hbox (15.07643pt too wide) in paragraph at lines 485--495
+Overfull \hbox (15.07643pt too wide) in paragraph at lines 527--537
 \OT1/cmr/m/n/10 Rothermel Code: []$\OT1/cmtt/m/n/10 https : / / github . com / Jeremy-[]Benik / 164 / blob / main / Assignments / draft / ros _ rothermel .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--495
+Underfull \hbox (badness 10000) in paragraph at lines 527--537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--495
+Underfull \hbox (badness 10000) in paragraph at lines 527--537
 
  []
 
 
-Overfull \hbox (16.10455pt too wide) in paragraph at lines 485--495
+Overfull \hbox (16.10455pt too wide) in paragraph at lines 527--537
 \OT1/cmr/m/n/10 Testing the Balbi Model: []$\OT1/cmtt/m/n/10 https : / / github . com / Jeremy-[]Benik / 164 / blob / main / Assignments / draft / Testing _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--495
+Underfull \hbox (badness 10000) in paragraph at lines 527--537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--495
+Underfull \hbox (badness 10000) in paragraph at lines 527--537
 
  []
 
-[23] (/Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+[17] [18] [19 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/Wind_Speed.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Wind_Speed.png (PNG copy)>] [20 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/slope_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/Slope.png (PNG copy)>] [21 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_with_slope.png (PNG copy)>] [22 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_no_slope_no_wind.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/FMC_without_slope_and_wind.png (PNG copy)>] [23 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/FMC_Rothermel_negative_vals.png (PNG copy)>] [24 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/fuel_height_rothermel.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/fuel_depth_m.png (PNG copy)>] [25 </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Rothermel/SAVR.png (PNG copy)> </Users/jeremybenik/Research_Files/164/Assignments/draft/Images/Balbi/SAVR.png (PNG copy)>] (/Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.aux)
 Package rerunfilecheck Info: File `Rough_Draft.out' has not changed.
-(rerunfilecheck)             Checksum: 2475E75D44251252B1B639F37C8890B8;4942.
+(rerunfilecheck)             Checksum: 36059315FA61781ED0412F74C5A60A37;5180.
  ) 
 Here is how much of TeX's memory you used:
- 11212 strings out of 478268
- 188997 string characters out of 5846347
- 490589 words of memory out of 5000000
- 29175 multiletter control sequences out of 15000+600000
+ 11221 strings out of 478268
+ 189564 string characters out of 5846347
+ 491730 words of memory out of 5000000
+ 29183 multiletter control sequences out of 15000+600000
  475156 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,15n,63p,2038b,357s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 60i,8n,63p,2105b,344s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.pdf (23 pages, 2653114 bytes).
+Output written on /Users/jeremybenik/Research_Files/164/Assignments/draft/.texpadtmp/Rough_Draft.pdf (25 pages, 2165236 bytes).
 PDF statistics:
- 525 PDF objects out of 1000 (max. 8388607)
- 442 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
- 318 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 571 PDF objects out of 1000 (max. 8388607)
+ 484 compressed objects within 5 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

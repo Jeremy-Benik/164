@@ -388,6 +388,14 @@ $\alpha$ = Terrain slope angle (degrees)\\
 U = Sum of normal component (to the fire front) of the natural wind velocity and fire generated inflow coming from the burnt area ($m / s$). \\
 $\beta _ t$ = Total packing ratio. \\
 R = Rate of Spread ($m / s$). \\
+
+\subsubsection*{Final Rate of Spread Equation}
+\indent The final ROS equation is computed by adding up all the components in the fire (the flame base, base radiation, and convective component) and this can be found in equation \ref{Balbi ROS equation}. 
+
+\begin{equation}
+	R = R_c + R_b + R_f
+	\label{Balbi ROS equation}
+\end{equation}
 \subsection{Comparison of the Two Models}
 \indent To test these two models, the models were placed under the same fuel categories and the same environmental conditions. Using the Kolgerberg dataset from the Van Wilgen experiment, a separate fuel category was created for the fuels used in this field study. The fuel in their study was the South African Fynbos. In their experiment (for the first experiment which is the one that will be extensively tested), there was a small wind of 1.5m/s and a slope of 3 degrees. The fuel moisture was at 3 percent and the air temperature was 297.4 K. The observed ROS in this experiment was 0.36 m/s. The Balbi code was originally using the 2018 paper, but has since been updated to the 2020 paper with the help of John Stuart and Dr. Adam Kochanski. This code was made to fit the same values as the developers of the Balbi model using the Kolgerberg experimental dataset, whereas there was one modification to the Rothermel model. In the Rothermel model there is a parameter that takes the maximum of the ROS up until 6 m/s. To better understand what the model does in extreme conditions this was left out so there is no cap at 6m/s. Some assumptions in these experiments are the air temperature will remain constant and the ignition line width will remain constant at 50m (this was later removed in the 2022 paper). With these conditions, the models can be properly tested. All plots will plot the same variables despite changes or not in them. The reason for this is so any change in the rate of spread can be easily identified (such as if the base radiation is the main contributor to the ROS or the wind coefficient). 
 \subsubsection{Wind Speed}

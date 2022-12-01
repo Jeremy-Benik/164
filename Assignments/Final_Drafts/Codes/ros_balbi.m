@@ -1,4 +1,4 @@
-function [ros, R_c, R_f, R_b] = ros_balbi(fuel,speed, tanphi, fmc_g, input)
+function [ros, R_c, R_f, R_b] = ros_balbi(fuel,speed, tanphi, fmc_g)
 % in
 %       fuel    fuel description structure
 %       speed   wind speed
@@ -11,9 +11,9 @@ function [ros, R_c, R_f, R_b] = ros_balbi(fuel,speed, tanphi, fmc_g, input)
 
 windrf=fuel.windrf;               % WIND REDUCTION FACTOR
 fueldepthm=fuel.fueldepthm;       % FUEL DEPTH (M)
-fueldepthm=input;       % FUEL DEPTH (M)
-%savr=1752.6;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
-savr=input;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
+%fueldepthm=input;       % FUEL DEPTH (M)
+savr=1752.6;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
+%savr=input;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
 fuelmce=fuel.fuelmce;             % MOISTURE CONTENT OF EXTINCTION
 fueldens=fuel.fueldens;           % OVENDRY PARTICLE DENSITY, LB/FT^3
 st=fuel.st;                       % FUEL PARTICLE TOTAL MINERAL CONTENT
