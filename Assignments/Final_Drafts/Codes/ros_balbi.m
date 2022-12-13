@@ -1,4 +1,4 @@
-function [ros, R_c, R_f, R_b] = ros_balbi(fuel,speed, tanphi, fmc_g)
+function [ros, R_c, R_f, R_b] = ros_balbi(fuel,speed, tanphi, fmc_g, input)
 % in
 %       fuel    fuel description structure
 %       speed   wind speed
@@ -12,8 +12,9 @@ function [ros, R_c, R_f, R_b] = ros_balbi(fuel,speed, tanphi, fmc_g)
 windrf=fuel.windrf;               % WIND REDUCTION FACTOR
 fueldepthm=fuel.fueldepthm;       % FUEL DEPTH (M)
 %fueldepthm=input;       % FUEL DEPTH (M)
-savr=1752.6;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
-%savr=input;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
+%savr=1752.6;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
+%savr=fuel.savr;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
+savr = input;
 fuelmce=fuel.fuelmce;             % MOISTURE CONTENT OF EXTINCTION
 fueldens=fuel.fueldens;           % OVENDRY PARTICLE DENSITY, LB/FT^3
 st=fuel.st;                       % FUEL PARTICLE TOTAL MINERAL CONTENT
@@ -143,7 +144,7 @@ for i=1:100
 %         end
         % compute rate of spread due to convection
 
-        R_c = b .* (u_0 .* (tan(alpha) / 2) + (U .* exp(-K_drag .* R)));
+        R_c = b .* (0 .* (tan(alpha) / 2) + (U .* exp(-K_drag .* R)));
 
 %         if R_c < 0;
 %             R_c = 0;

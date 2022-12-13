@@ -11,7 +11,7 @@ fuel(   1).fz0_descr = ['ROUGHNESS LENGTH FOR VERTICAL WIND LOG INTERPOLA' ...
 %fuel(   1).fgi_descr = 'INITIAL TOTAL MASS OF SURFACE FUEL (KG/M**2)';
 fuel(   1).fueldepthm = 1.8;
 fuel(   1).fueldepthm_descr = 'FUEL DEPTH (M)';
-fuel(   1).savr = 1219.51000000000;
+fuel(   1).savr = 1752.6;
 %fuel(   1).savr = 13123.36;
 fuel(   1).savr_descr = ['FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/F' ...
                        'T'];
