@@ -147,6 +147,14 @@ Where: \\
   \label{rothermel_moistures_damping}
 \end{figure}
 
+The equation the authors found that fits the curve in Figure \ref{rothermel_moistures_damping} is:
+\begin{equation}
+	\label{eta_m}
+	\eta _ M = 1 - 2.59 \frac{M_f}{M_x} + 5.11 (\frac{M_f}{M_x}) ^ 2 - 3.52 (\frac{M_f}{M_x}) ^ 3
+\end{equation}
+Where: \\
+M$_f$ is the fuel moisture. \\
+M$_X$ is the fuel moisture of extinction. \\
  \indent To find the mineral damping coefficient, the authors assumed the ratio of the "normalized decomposition rate would be the same as the normalized reaction intensity" \citep{Rothermel1972}. They then used the maximum decomposition rate and found the mineral content was at 0.0001 which was the lowest fractional mineral content for natural fuels. By then looking into silica-free ash, the authors were able to create another plot as seen in Figure \ref{rothermel_mineral_damping_coef}. They then found the equation fitting the curve and set that as the mineral damping coefficient. To find the damping coefficient, all the user needs to input is the effective mineral content (silica free). \\
  \begin{figure}[h]
  \centering
@@ -154,6 +162,17 @@ Where: \\
   \caption{Determining the mineral damping coefficient.}
   \label{rothermel_mineral_damping_coef}
 \end{figure}
+
+
+
+
+Similar with the moisture damping coefficient, the authors fit this curve and set that as the mineral damping coefficient. 
+\begin{equation}
+	\label{mineral_damping_coefficient}
+	\eta _ S = 0.174(S_e) ^ {-0.19}
+\end{equation}
+Where: \\
+S$_e$ is the effective mineral content (silica free).
  \subsubsection{Fuel Packing Ratio ($\beta$) and Surface Area to Volume Ratio ($\sigma$)}
  \indent The last parameters are the fuel packing ratio and the surface area to volume ratio. Both of these are fuel properties that to be specified within the fuel parameter for the model to work. These parameters are necessary as they determine how intense a fire may be. With a high packing ratio, there will be a low air-to-fuel ratio and this will make it difficult for the flame to penetrate to the top of the fuel. A more sparse fuel bed will result in a low intensity fire as there will be significant heat losses between the fuel and flame. Finding the optimal packing ratio to achieve the maximum fire intensity is a challenging task as it is likely different for each fuel. The packing ratio can be defined by equation \ref{Equation 8}.
  \begin{equation}
