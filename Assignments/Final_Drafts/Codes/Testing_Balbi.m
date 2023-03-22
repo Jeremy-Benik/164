@@ -7,7 +7,7 @@ fuels_mod;
 %ros_balbi(fuel(3), 1.5, tand(3), 0.03)
 
 %% Fuel Moisture
-x = linspace(0, 1, 1000);
+x = linspace(0, .25, 1000);
 [ros, R_c, R_f, R_b] = ros_balbi(fuel(3), 1.5, tand(3), x);
 x = x .* 100;
 
@@ -62,42 +62,31 @@ x = linspace(0, 20, 1000);
 [ros, R_c, R_f, R_b] = ros_balbi(fuel(3), x, tand(3), 0.03);
 
 % Rate of spread
-figure('Renderer', 'painters', 'Position', [10 10 800 600])
-%subplot(2, 2, 1);
-tiledlayout(2, 2, 'TileSpacing', 'compact', 'Padding', 'none');
-nexttile
+subplot(2, 1, 1);
 a = plot(x, ros, color = 'red');
 set(a,'LineWidth',2);
 %xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 ylabel('Rate of Spread (m/s)', fontsize = 13, fontweight = 'bold');
+%xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
+
 title('ROS vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
+
 % Convective component
-%subplot(2, 2, 2);
-nexttile
+subplot(2, 2, 3);
 a = plot(x, R_c, color = 'red');
 set(a,'LineWidth',2);
 %xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 ylabel('R_c', fontsize = 13, fontweight = 'bold');
+xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
+
 title('R_c vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
 
-% Radiative component
-%subplot(2, 2, 3);
-nexttile
-a = plot(x, R_b, color = 'red');
-set(a,'LineWidth',2);
-xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
-ylabel('R_b', fontsize = 13, fontweight = 'bold');
-title('R_b vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
-grid on;
-ylim([0, max(ros)]);
-
 % Flame base radiation
-%subplot(2, 2, 4);
-nexttile
+subplot(2, 2, 4);
 a = plot(x, R_f, color = 'red');
 set(a,'LineWidth',2);
 xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
@@ -106,7 +95,7 @@ title('R_f vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
 
-sgtitle('Wind Speed (m/s) vs. ROS, R_c, R_b, R_f', fontsize = 16, fontweight = 'bold')
+sgtitle('Wind Speed (m/s) vs. ROS, R_c, R_f', fontsize = 16, fontweight = 'bold')
 
 
 %% Slope
@@ -114,10 +103,7 @@ x = linspace(0, 80, 1000);
 [ros, R_c, R_f, R_b] = ros_balbi(fuel(3), 1.5, tand(x), 0.03);
 
 % Rate of spread
-figure('Renderer', 'painters', 'Position', [10 10 800 600])
-%subplot(2, 2, 1);
-tiledlayout(2, 2, 'TileSpacing', 'compact', 'Padding', 'none');
-nexttile
+subplot(2, 1, 1);
 a = plot(x, ros, color = 'red');
 set(a,'LineWidth',2);
 %xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
@@ -125,31 +111,20 @@ ylabel('Rate of Spread (m/s)', fontsize = 13, fontweight = 'bold');
 title('ROS vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
+
 % Convective component
-%subplot(2, 2, 2);
-nexttile
+subplot(2, 2, 3);
+
 a = plot(x, R_c, color = 'red');
 set(a,'LineWidth',2);
-%xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
+xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
 ylabel('R_c', fontsize = 13, fontweight = 'bold');
 title('R_c vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
 
-% Radiative component
-%subplot(2, 2, 3);
-nexttile
-a = plot(x, R_b, color = 'red');
-set(a,'LineWidth',2);
-xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
-ylabel('R_b', fontsize = 13, fontweight = 'bold');
-title('R_b vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
-grid on;
-ylim([0, max(ros)]);
-
 % Flame base radiation
-%subplot(2, 2, 4);
-nexttile
+subplot(2, 2, 4);
 a = plot(x, R_f, color = 'red');
 set(a,'LineWidth',2);
 xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
@@ -158,10 +133,10 @@ title('R_f vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
 
-sgtitle('Slope vs. ROS, R_c, R_b, R_f', fontsize = 16, fontweight = 'bold')
+sgtitle('Slope vs. ROS, R_c, R_f', fontsize = 16, fontweight = 'bold')
 
 %% No Slope No Wind FMC 
-x = linspace(0, 1, 1000);
+x = linspace(0, .25, 1000);
 [ros, R_c, R_f, R_b] = ros_balbi(fuel(3), 0, 0, x);
 x = x .* 100;
 
