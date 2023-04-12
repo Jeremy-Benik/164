@@ -68,32 +68,36 @@ set(a,'LineWidth',2);
 %xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 ylabel('Rate of Spread (m/s)', fontsize = 13, fontweight = 'bold');
 %xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
+xticklabels({})
 
 title('ROS vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
 
 % Convective component
-subplot(2, 2, 3);
-a = plot(x, R_c, color = 'red');
+subplot(2, 1, 2);
+a = plot(x, R_c, color = 'blue');
+hold on;
+b = plot(x, R_f, color = 'green');
 set(a,'LineWidth',2);
+set(b,'LineWidth',2);
 %xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
-ylabel('R_c', fontsize = 13, fontweight = 'bold');
+ylabel('Rate of Spread (m/s)', fontsize = 13, fontweight = 'bold');
 xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 
-title('R_c vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
+title('R_c and R_f vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
-
-% Flame base radiation
-subplot(2, 2, 4);
-a = plot(x, R_f, color = 'red');
-set(a,'LineWidth',2);
-xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
-ylabel('R_f', fontsize = 13, fontweight = 'bold');
-title('R_f vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
-grid on;
-ylim([0, max(ros)]);
+legend('R_c', 'R_f', 'Location','northwest')
+% % Flame base radiation
+% subplot(2, 2, 4);
+% a = plot(x, R_f, color = 'red');
+% set(a,'LineWidth',2);
+% xlabel('Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
+% ylabel('R_f', fontsize = 13, fontweight = 'bold');
+% title('R_f vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
+% grid on;
+% ylim([0, max(ros)]);
 
 sgtitle('Wind Speed (m/s) vs. ROS, R_c, R_f', fontsize = 16, fontweight = 'bold')
 
@@ -111,27 +115,31 @@ ylabel('Rate of Spread (m/s)', fontsize = 13, fontweight = 'bold');
 title('ROS vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
+xticklabels({})
 
 % Convective component
-subplot(2, 2, 3);
+subplot(2, 1, 2);
 
-a = plot(x, R_c, color = 'red');
+a = plot(x, R_c, color = 'blue');
+hold on;
+b = plot(x, R_f, color = 'green');
 set(a,'LineWidth',2);
+set(b,'LineWidth',2);
 xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
 ylabel('R_c', fontsize = 13, fontweight = 'bold');
-title('R_c vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
+title('R_c and R_f vs. Wind Speed (m/s)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
-
-% Flame base radiation
-subplot(2, 2, 4);
-a = plot(x, R_f, color = 'red');
-set(a,'LineWidth',2);
-xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
-ylabel('R_f', fontsize = 13, fontweight = 'bold');
-title('R_f vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
-grid on;
-ylim([0, max(ros)]);
+legend('R_c', 'R_f', 'Location','northwest')
+% % Flame base radiation
+% subplot(2, 2, 4);
+% a = plot(x, R_f, color = 'red');
+% set(a,'LineWidth',2);
+% xlabel('Slope (degrees)', fontsize = 13, fontweight = 'bold');
+% ylabel('R_f', fontsize = 13, fontweight = 'bold');
+% title('R_f vs. Slope (degrees)', fontsize = 13, fontweight = 'bold');
+% grid on;
+% ylim([0, max(ros)]);
 
 sgtitle('Slope vs. ROS, R_c, R_f', fontsize = 16, fontweight = 'bold')
 
@@ -188,7 +196,7 @@ ylim([0, max(ros)]);
 sgtitle('Fuel Moisture % vs. ROS, R_c, R_b, R_f in no wind/slope', fontsize = 16, fontweight = 'bold')
 
 %% Testing fueldepthm (fuel height (m)
-x = linspace(0, 20, 1000);
+x = linspace(0, 3, 1000);
 [ros, R_c, R_f, R_b] = ros_balbi(fuel(3), 1.5, tand(3), 0.03, x);
 % Rate of spread
 figure('Renderer', 'painters', 'Position', [10 10 800 600])
@@ -202,6 +210,8 @@ ylabel('Rate of Spread (m/s)', fontsize = 13, fontweight = 'bold');
 title('ROS vs. Fuel Height (m)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
+xticklabels({})
+
 % Convective component
 %subplot(2, 2, 2);
 nexttile
@@ -212,6 +222,7 @@ ylabel('R_c', fontsize = 13, fontweight = 'bold');
 title('R_c vs. Fuel Height (m)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
+xticklabels({})
 
 % Radiative component
 %subplot(2, 2, 3);
@@ -475,7 +486,7 @@ ylim([0, max(ros)]);
 sgtitle('Chi vs. ROS, R_c, R_b, R_f', fontsize = 16, fontweight = 'bold')
 
 %% SAVR
-x = linspace(100, 5000, 1000);
+x = linspace(100, 5000, 5000);
 [ros, R_c, R_f, R_b] = ros_balbi(fuel(3), 1.5, tand(3), 0.03, x);
 % Rate of spread
 figure('Renderer', 'painters', 'Position', [10 10 800 600])
@@ -489,6 +500,7 @@ ylabel('Rate of Spread (m/s)', fontsize = 13, fontweight = 'bold');
 title('ROS vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
+xticklabels({})
 % Convective component
 %subplot(2, 2, 2);
 nexttile
@@ -499,6 +511,7 @@ ylabel('R_c', fontsize = 13, fontweight = 'bold');
 title('R_c vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
 grid on;
 ylim([0, max(ros)]);
+xticklabels({})
 
 % Radiative component
 %subplot(2, 2, 3);

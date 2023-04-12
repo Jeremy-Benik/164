@@ -12,7 +12,7 @@ ros_rothermel(fuel(3), 1.5, tand(3), 0.03)
 %figure out how to change the figsize 
 %% Testing the Fuel Moisture
 x = linspace(0, 1, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), 1.5, tand(3), x);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), 1.5, tand(3), x);
 x = x .* 100;
 
 % Rate of spread
@@ -105,17 +105,17 @@ grid on;
 sgtitle('Fuel Moisture % vs. ROS, ir, qig, phiw, phis, gamma, xifr, etam, rtemp1', fontsize = 16, fontweight = 'bold')
 %% Testing the Wind Speed
 x = linspace(0, 20, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), x, tand(3), 0.03);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), x, tand(3), 0.03);
 
 % Rate of spread
 subplot(2, 1, 1);
 plot(x, ros, 'blue', 'LineWidth', 2);
-xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
+% xlabel('Wind Speed (m/s)', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread (m/s)', fontsize = 11, fontweight = 'bold');
 title('ROS vs. Wind Speed (m/s)', fontsize = 10, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
-
+xticklabels({})
 % Flame base radiation
 subplot(2, 1, 2);
 plot(x, phiw, 'blue', 'LineWidth', 2);
@@ -128,16 +128,17 @@ grid on;
 sgtitle('Wind Speed vs. ROS, phiw', fontsize = 18, fontweight = 'bold')
 %% Testing the Slope
 x = linspace(0, 80, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), 1.5, tand(x), 0.03);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), 1.5, tand(x), 0.03);
 
 
 % Rate of spread
 subplot(2, 1, 1);
 plot(x, ros, 'blue', 'LineWidth', 2);
-xlabel('Slope', fontsize = 11, fontweight = 'bold');
+% xlabel('Slope', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread (m/s)', fontsize = 11, fontweight = 'bold');
 title('ROS vs. Slope', fontsize = 10, fontweight = 'bold');
 grid on;
+xticklabels({})
 %ylim([0, max(ros)]);
 
 subplot(2, 1, 2);
@@ -151,8 +152,8 @@ grid on;
 
 sgtitle('Slope (Degrees) vs. ROS, phis', fontsize = 18, fontweight = 'bold')
 %% Testing the Fuel Height
-x = linspace(0, 20, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), 1.5, tand(3), 0.03, x);
+x = linspace(0, 3, 1000);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), 1.5, tand(3), 0.03, x);
 
 
 % Rate of spread
@@ -161,20 +162,22 @@ figure('Renderer', 'painters', 'Position', [10 10 800 600])
 tiledlayout(2, 3, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, 'blue', 'LineWidth', 2);
-xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
+% xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread (m/s)', fontsize = 11, fontweight = 'bold');
 title('ROS vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
+xticklabels({})
 %ylim([0, max(ros)]);
 
 % IR radiative component
 %subplot(3, 3, 2);
 nexttile
 plot(x, ir, 'blue', 'LineWidth', 2);
-xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
+% xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
 ylabel('IR', fontsize = 11, fontweight = 'bold');
 title('IR vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
+xticklabels({})
 %ylim([0, max(ros)]);
 
  
@@ -182,10 +185,11 @@ grid on;
 %subplot(3, 3, 4);
 nexttile
 plot(x, phiw, 'blue', 'LineWidth', 2);
-xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
+% xlabel('Fuel Height (m)', fontsize = 11, fontweight = 'bold');
 ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
 title('Phi_w vs. Fuel Height (m)', fontsize = 10, fontweight = 'bold');
 grid on;
+xticklabels({})
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 5);
@@ -221,7 +225,7 @@ sgtitle('Fuel Height (m) vs. ROS, ir, phiw, phis, gamma, xifr', fontsize = 18, f
 
 %% Testing the Fuel Load
 x = linspace(0, 0.969, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), 1.5, tand(x), 0.03, x);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), 1.5, tand(x), 0.03, x);
 
 
 % Rate of spread
@@ -315,7 +319,7 @@ grid on;
 sgtitle('Fuel Load (Kg/m^2) vs. ROS, ir, qig, phiw, phis, gamma, xifr, etam, rtemp1', fontsize = 18, fontweight = 'bold')
 %% Testing the Fuel Moisture no slope no wind
 x = linspace(0, .12, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), 0, 0, x);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), 0, 0, x);
 x = x .* 100;
 
 % Rate of spread
@@ -408,60 +412,85 @@ grid on;
 
 sgtitle('Fuel Moisture % vs. ROS, ir, qig, phiw, phis, gamma, xifr, etam, rtemp1', fontsize = 18, fontweight = 'bold')
 %% Testing the SAVR
-x = linspace(100, 5000, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), 1.5, tand(3), 0.03, x);
-x = x .* 100;
+x = linspace(100, 5000, 5000);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), 1.5, tand(3), 0.03, x);
+
 
 % Rate of spread
 %subplot(3, 3, 1);
 figure('Renderer', 'painters', 'Position', [10 10 800 600])
-tiledlayout(2, 2, 'TileSpacing', 'compact', 'Padding', 'none');
+tiledlayout(3, 2, 'TileSpacing', 'compact', 'Padding', 'none');
 nexttile
 plot(x, ros, 'blue', 'LineWidth', 2);
-xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
+% xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
 ylabel('Rate of Spread (m/s)', fontsize = 11, fontweight = 'bold');
-title('ROS vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+title('ROS vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
 grid on;
+xticklabels({})
 %ylim([0, max(ros)]);
 
 % IR radiative component
 %subplot(3, 3, 2);
 nexttile
 plot(x, ir, 'blue', 'LineWidth', 2);
-xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
+% xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
 ylabel('IR', fontsize = 11, fontweight = 'bold');
-title('IR vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+title('IR vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
 grid on;
+xticklabels({})
 %ylim([0, max(ros)]);
  
 % Flame base radiation
 %subplot(3, 3, 4);
 nexttile
 plot(x, phiw, 'blue', 'LineWidth', 2);
-xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
+% xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
 ylabel('Phi_w', fontsize = 11, fontweight = 'bold');
-title('Phi_w vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+title('Phi_w vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
 grid on;
+xticklabels({})
 %ylim([0, max(ros)]);
 
 %subplot(3, 3, 6);
 nexttile
 plot(x, gamma, 'blue', 'LineWidth', 2);
-xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
+% xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
 ylabel('Gamma (1/min) ', fontsize = 11, fontweight = 'bold');
-title('Gamma vs. SAVR (1/ft)', fontsize = 10, fontweight = 'bold');
+title('Gamma vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
+grid on;
+xticklabels({})
+%ylim([0, max(ros)]);
+
+%subplot(3, 3, 6);
+nexttile
+plot(x, epsilon, 'blue', 'LineWidth', 2);
+xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
+ylabel('Epsilon', fontsize = 11, fontweight = 'bold');
+title('Epsilon vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
+grid on;
+
+%ylim([0, max(ros)]);
+
+%subplot(3, 3, 6);
+nexttile
+plot(x, xifr, 'blue', 'LineWidth', 2);
+xlabel('SAVR (1/ft)', fontsize = 11, fontweight = 'bold');
+ylabel('xifr', fontsize = 11, fontweight = 'bold');
+title('Propagating flux ratio vs. SAVR (1/ft)', fontsize = 13, fontweight = 'bold');
 grid on;
 %ylim([0, max(ros)]);
 
-sgtitle('SAVR (1/ft) vs. ROS, ir, qig, phiw, phis, gamma, xifr, etam, rtemp1', fontsize = 18, fontweight = 'bold')
+sgtitle('SAVR (1/ft) vs. ROS, ir, qig, phiw,  gamma, xifr,  epsilon, rhob', fontsize = 18, fontweight = 'bold')
 %%
 x = linspace(0, 80, 1000);
-[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = ros_rothermel(fuel(3), 1.5, tand(x), 0.03);
+[ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = ros_rothermel(fuel(3), 1.5, tand(x), 0.03);
 
-plot(x, ros, 'blue', 'Linewidth', 2)
+% plot(x, ros, 'blue', 'Linewidth', 2)
+semilogy(x, ros)
 xlabel('Slope (degrees)', fontsize = 15, fontweight = 'bold');
 ylabel('Rate of Spread (m/s)', fontsize = 15, fontweight = 'bold');
 title('ROS vs. Slope', fontsize = 18, fontweight = 'bold');
+
 grid on;
 
 

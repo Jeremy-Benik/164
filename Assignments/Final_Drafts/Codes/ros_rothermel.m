@@ -1,6 +1,6 @@
 %function [ros] = fire_ros(fuel,speed,tanphi,fmc_g, input)
 
-function [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = fire_ros(fuel,speed,tanphi,fmc_g, input)
+function [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, epsilon, rhob, ros] = fire_ros(fuel,speed,tanphi,fmc_g, input)
 % function ros = fire_ros(fuel,speed,tanphi,fmc_g)
 
 % ros=fire_ros(fuel,speed,tanphi)
@@ -18,11 +18,11 @@ function [ir, qig, phiw, phis, gamma, xifr, etam, rtemp1, ros] = fire_ros(fuel,s
 windrf=fuel.windrf;               % WIND REDUCTION FACTOR
 fgi=fuel.fgi;                     % INITIAL TOTAL MASS OF SURFACE FUEL (KG/M**2)
 %fgi = input;
-%fueldepthm=fuel.fueldepthm;       % FUEL DEPTH (M)
+% fueldepthm=fuel.fueldepthm;       % FUEL DEPTH (M)
 fueldepthm=input;       % FUEL DEPTH (M)
 
 savr=fuel.savr;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
-%savr=input;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
+% savr=input;                   % FUEL PARTICLE SURFACE-AREA-TO-VOLUME RATIO, 1/FT
 fuelmce=fuel.fuelmce;             % MOISTURE CONTENT OF EXTINCTION
 fueldens=fuel.fueldens;           % OVENDRY PARTICLE DENSITY, LB/FT^3
 st=fuel.st;                       % FUEL PARTICLE TOTAL MINERAL CONTENT
@@ -71,10 +71,10 @@ wn       = fuelload/(1 + st);              % net fuel loading, lb/ft^2
 rtemp1   = fuelmc_g./fuelmce;
 etam     = 1.-2.59.*rtemp1 +5.11.*rtemp1.^2 -3.52.*rtemp1.^3;  % moist damp coef
 etas     = 0.174* se^(-0.19);              % mineral damping coef
-ir       = gamma .* wn .* fuelheat .* etam .* etas; % rxn intensity,btu/ft^2 min
+ir       = gamma .* wn .* fuelheat .* etam .* etas; % rxn intensity,     min
 irm      = ir .* 1055./( 0.3048^2 * 60.) .* 1.e-6;% for mw/m^2 (set but not used)
-xifr     = exp( (0.792 + 0.681.*savr.^0.5)...
-            * (betafl+0.1)) /(192. + 0.2595.*savr); % propagating flux ratio
+xifr     = exp((0.792 + 0.681.*savr.^0.5)...
+            .* (betafl+0.1)) ./(192. + 0.2595.*savr); % propagating flux ratio
 %        ... r_0 is the spread rate for a fire on flat ground with no wind.
 r_0      = ir.*xifr./(rhob .* epsilon .* qig);  % default spread rate in ft/min
 
